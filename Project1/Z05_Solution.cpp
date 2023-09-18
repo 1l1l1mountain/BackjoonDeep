@@ -2,46 +2,41 @@
 void Level05()
 {
 
-	char name[1000001] = {};
+	char name[1000001];
 
-	//cin >> name;
+	cin >> name;
 
 	//cout << strlen(name); // 문자열 c++ 버전 알아보기
 
 	//대문자로 변경
-	for (int i = 0; i < strlen(name); i++)
-	{
-
-		if ('a' <= name[i] && name[i] <= 'z') name[i] -= ('a' - 'A');
-
-	}
 
 	int Alphabet[26] = {};
-	//알파벳빈도수 설정	
-	for (int i = 0; i < strlen(name); i++) {
-
-		for (int j = 0; j < 26; j++)
-		{
-			if ((name[i] - 'A') == j) Alphabet[j]++;
-
-
-		}
-	}
-
-
-	int Max = 0;
-
-	for (int i = 0; i < 26; i++)
+	int str = strlen(name);
+	for (int i = 0; i < str; i++)
 	{
 
-		if (Alphabet[Max] < Alphabet[i])	Max = i;
-
+		if (name[i] >= 'a') Alphabet[name[i] - 'a']++;
+		else Alphabet[name[i] - 'A']++;
 	}
 
-	//Max는 인덱스값
+	
+	int Max = 0;
+	char ans;
+	for (int i = 0; i < 26; i++)
+	{
+		if (Alphabet[i] == Max) ans = '?';
+		else if (Alphabet[i] > Max)
+		{
+			Max = Alphabet[i];
+			ans = 'A' + i;
+		}
+	}
+	cout << ans;
+
+
 }
 /*
-
+다시 풀어보기!!
 a : 97
 A : 65
 */
