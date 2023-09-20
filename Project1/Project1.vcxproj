@@ -133,6 +133,9 @@
     <ClCompile Include="Z03_Solution.cpp" />
     <ClCompile Include="Z04_Solution.cpp" />
     <ClCompile Include="Z05_Solution.cpp" />
+    <ClCompile Include="Z06_Solution.cpp" />
+    <ClCompile Include="Z07_Solution.cpp" />
+    <ClCompile Include="Z08_Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io.h" />

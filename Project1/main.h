@@ -4,3 +4,6 @@ void Level02();
 void Level03();
 void Level04();
 void Level05();
+void Level06();
+void Level07();
+void Level08();

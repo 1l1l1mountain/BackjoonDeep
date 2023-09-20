@@ -18,7 +18,7 @@ void Level05()
 		if (name[i] >= 'a') Alphabet[name[i] - 'a']++;
 		else Alphabet[name[i] - 'A']++;
 	}
-
+	
 	
 	int Max = 0;
 	char ans;
